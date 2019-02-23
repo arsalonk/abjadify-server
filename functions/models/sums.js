@@ -3,22 +3,28 @@
 const mongoose = require('mongoose');
 
 const sumsSchema = mongoose.Schema({
-  heavenly: [{
+  heavenly: {
     total: Number,
     wordSums: [{
       word: String,
       value: Number
     }],
-    letterSums: [Number]
-  }],
-  earthly: [{
+    letterSums: String,
+    spaced: String
+  },
+  earthly: {
     total: Number,
     wordSums: [{
       word: String,
       value: Number
     }],
-    letterSums: [Number]
-  }]
+    letterSums: String,
+    spaced: String
+  },
+  general: {
+    unused: [String],
+    letterCount: Number
+  }
 });
 
 sumsSchema.set('toObject', {
