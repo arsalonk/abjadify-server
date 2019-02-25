@@ -14,7 +14,7 @@
     "dotenv": "^6.0.0",
     "express": "^4.16.3",
     "firebase-admin": "~5.13.0",
-    "firebase-functions": "^2.0.2",
+    "firebase-functions": "^2.2.0",
     "jsonwebtoken": "^8.3.0",
     "mongoose": "^5.0.6",
     "morgan": "^1.9.0",

@@ -2,12 +2,14 @@
 // Dependencies
 const express = require('express');
 const router = express.Router();
+const fs = require('fs');
+const file = fs.createWriteStream('test.txt');
 
-router.get('/', (req, res, next) => {
-    // const { text, name } = req.body;
-    res.attachment(`test.txt`);
-    res.type('txt');
-    res.send('this is a test');
-})
+
+router.get('/:data/:dest', (req, res, next) => {
+    const { data, dest } = req.params;
+    file.write(data);
+
+});
 
 module.exports = router;

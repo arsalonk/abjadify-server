@@ -2,7 +2,7 @@
 const mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
 const functions = require('firebase-functions');
-const DATABASE_URL = require('./config').DATABASE_URL || functions.config().database.url;
+const DATABASE_URL = functions.config().database.url;
 
 function dbConnect(url = DATABASE_URL) {
   return mongoose.connect(url)
